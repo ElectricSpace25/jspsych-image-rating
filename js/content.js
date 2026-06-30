@@ -35,7 +35,7 @@ export function imageRatingContent(image) {
                 "elements": [
                     {
                         type: "html",
-                        name: "image",
+                        name: "instructions",
                         html: `<img src="${image}" style="width: auto; height: 280px;">`
                     },
                     {
