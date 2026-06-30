@@ -10,7 +10,10 @@ export const config = {
     DEBUG_LOGS: false,
 
     // When enabled, saves data locally
-    DEBUG_SAVE: false
+    DEBUG_SAVE: false,
+
+    // When not null, how many images to show (used to reduce images for debugging)
+    DEBUG_IMAGES: null
 };
 
 export const images = {
