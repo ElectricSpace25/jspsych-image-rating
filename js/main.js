@@ -23,17 +23,25 @@ const screenerTrial = {
     data: { trial_name: "screener" }
 };
 
-const sampleTrial = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: "Do you like cats or dogs?",
-    choices: ["Cats", "Dogs"],
-    data: { trial_name: "pets" }
-};
-
-const sampleSurveyTrial = {
-    type: jsPsychSurvey,
-    survey_json: content.sampleSurveyContent,
-    data: { trial_name: "colors" }
+const likertTrial = {
+    type: jsPsychSurveyLikert,
+    questions: [
+        {
+            prompt: `<img src="images/0SD/CFD_WM_001_014_N_0SD.png" style="width: auto; height: 300px;">
+               <h3>How trustworthy is this face?</h3>`,
+            labels: [
+                "Very Untrustworthy",
+                " ",
+                " ",
+                " ",
+                " ",
+                " ",
+                "Very Trustworthy"
+            ]
+        }
+    ],
+    scale_width: 500,
+    data: { trial_name: "trial" }
 };
 
 const demographicsTrial = {
@@ -60,9 +68,8 @@ if (config.DEBUG_LOGS) console.log("Example") // Sample debug log that only prin
 var timeline = [];
 
 timeline.push(
-    screenerTrial,
-    sampleTrial,
-    sampleSurveyTrial,
+    // screenerTrial,
+    likertTrial,
     demographicsTrial,
     completionTrial
 );
