@@ -1,9 +1,5 @@
 export const config = {
 
-    // Image stimuli filepath
-    IMAGE_PATH: "images",
-
-
     // Link participants click after completing the study
     COMPLETION_LINK: "https://app.prolific.co/submissions/complete?cc=????????",
 
@@ -21,7 +17,7 @@ export const images = {
     BASE_FOLDER: "images",
 
     EXTENSION: ".png",
-    
+
     NAMES: [
         "CFD_WM_001_014_N",
         "CFD_WM_002_009_N",
