@@ -25,19 +25,63 @@ export const screenerContent = {
         ]
 };
 
-export const sampleSurveyContent = {
-    "title": "Color",
-    "pages": [
-        {
-            "elements": [
-                {
-                    "type": "text",
-                    "name": "question1",
-                    "title": "What's your favorite color?"
-                }
-            ]
-        }
-    ]
+export function imageRatingContent(image) {
+    return {
+        pages: [
+            {
+                title: "How trustworthy is this face?",
+                "elements": [
+                    {
+                        type: "html",
+                        name: "image",
+                        html: `<img src="${image}" style="width: auto; height: 280px;">`
+                    },
+                    {
+                        "type": "rating",
+                        "name": "rating",
+                        "titleLocation": "hidden",
+                        "displayMode": "buttons",
+                        "autoGenerate": false,
+                        "rateCount": 7,
+                        "rateValues": [
+                            {
+                                "value": 1,
+                                "text": " "
+                            },
+                            {
+                                "value": 2,
+                                "text": " "
+                            },
+                            {
+                                "value": 3,
+                                "text": " "
+                            },
+                            {
+                                "value": 4,
+                                "text": " "
+                            },
+                            {
+                                "value": 5,
+                                "text": " "
+                            },
+                            {
+                                "value": 6,
+                                "text": " "
+                            },
+                            {
+                                "value": 7,
+                                "text": " "
+                            }
+                        ],
+                        "rateMax": 7,
+                        "minRateDescription": "Very\nUntrustworthy",
+                        "maxRateDescription": "Very\nTrustworthy",
+                        "rateDescriptionLocation": "top"
+                    }
+                ]
+            }
+        ]
+    }
 };
 
 export const demographicsContent = {

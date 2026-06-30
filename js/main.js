@@ -23,25 +23,10 @@ const screenerTrial = {
     data: { trial_name: "screener" }
 };
 
-const likertTrial = {
-    type: jsPsychSurveyLikert,
-    questions: [
-        {
-            prompt: `<img src="images/0SD/CFD_WM_001_014_N_0SD.png" style="width: auto; height: 300px;">
-               <h3>How trustworthy is this face?</h3>`,
-            labels: [
-                "Very Untrustworthy",
-                " ",
-                " ",
-                " ",
-                " ",
-                " ",
-                "Very Trustworthy"
-            ]
-        }
-    ],
-    scale_width: 500,
-    data: { trial_name: "trial" }
+const imageRatingTrial = {
+    type: jsPsychSurvey,
+    survey_json: content.imageRatingContent("images/0SD/CFD_WM_001_014_N_0SD.png"),
+    data: { trial_name: "image_rating" }
 };
 
 const demographicsTrial = {
@@ -68,8 +53,8 @@ if (config.DEBUG_LOGS) console.log("Example") // Sample debug log that only prin
 var timeline = [];
 
 timeline.push(
-    // screenerTrial,
-    likertTrial,
+    screenerTrial,
+    imageRatingTrial,
     demographicsTrial,
     completionTrial
 );
