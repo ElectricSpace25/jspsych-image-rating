@@ -36,7 +36,7 @@ const screenerTrial = {
 const imageRatingTrial = {
     type: jsPsychSurvey,
     survey_json: () => content.imageRatingContent(jsPsych.evaluateTimelineVariable("image")),
-    data: { trial_name: "image_rating" }
+    data: { trial_name: "image_rating", image: jsPsych.timelineVariable("image")}
 };
 
 const demographicsTrial = {
