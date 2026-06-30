@@ -1,14 +1,132 @@
 export const config = {
-    
+
+    // Image stimuli filepath
+    IMAGE_PATH: "images",
+
+
     // Link participants click after completing the study
     COMPLETION_LINK: "https://app.prolific.co/submissions/complete?cc=????????",
 
     // Link participants click after completing the study
     FAILURE_LINK: "https://app.prolific.co/submissions/complete?cc=????????",
-    
+
     // When enabled, logs debug messages to console
     DEBUG_LOGS: false,
 
     // When enabled, saves data locally
     DEBUG_SAVE: false
 };
+
+export const images = {
+    BASE_FOLDER: "images",
+
+    EXTENSION: ".png",
+    
+    NAMES: [
+        "CFD_WM_001_014_N",
+        "CFD_WM_002_009_N",
+        "CFD_WM_003_002_N",
+        "CFD_WM_004_010_N",
+        "CFD_WM_006_002_N",
+        "CFD_WM_009_002_N",
+        "CFD_WM_010_001_N",
+        "CFD_WM_011_002_N",
+        "CFD_WM_012_001_N",
+        "CFD_WM_013_001_N",
+        "CFD_WM_014_002_N",
+        "CFD_WM_015_002_N",
+        "CFD_WM_016_001_N",
+        "CFD_WM_017_002_N",
+        "CFD_WM_018_002_N",
+        "CFD_WM_019_003_N",
+        "CFD_WM_020_001_N",
+        "CFD_WM_021_001_N",
+        "CFD_WM_022_001_N",
+        "CFD_WM_023_001_N",
+        "CFD_WM_024_015_N",
+        "CFD_WM_025_002_N",
+        "CFD_WM_026_001_N",
+        "CFD_WM_028_003_N",
+        "CFD_WM_029_023_N",
+        "CFD_WM_031_003_N",
+        "CFD_WM_032_001_N",
+        "CFD_WM_033_025_N",
+        "CFD_WM_034_030_N",
+        "CFD_WM_035_032_N",
+        "CFD_WM_036_031_N",
+        "CFD_WM_037_025_N",
+        "CFD_WM_038_003_N",
+        "CFD_WM_039_018_N",
+        "CFD_WM_040_022_N",
+        "CFD_WM_041_021_N",
+        "CFD_WM_200_034_N",
+        "CFD_WM_201_063_N",
+        "CFD_WM_202_107_N",
+        "CFD_WM_203_023_N",
+        "CFD_WM_204_031_N",
+        "CFD_WM_205_007_N",
+        "CFD_WM_206_045_N",
+        "CFD_WM_207_048_N",
+        "CFD_WM_208_068_N",
+        "CFD_WM_209_038_N",
+        "CFD_WM_210_057_N",
+        "CFD_WM_211_054_N",
+        "CFD_WM_212_097_N",
+        "CFD_WM_213_076_N",
+        "CFD_WM_214_026_N",
+        "CFD_WM_215_041_N",
+        "CFD_WM_216_061_N",
+        "CFD_WM_217_070_N",
+        "CFD_WM_218_074_N",
+        "CFD_WM_219_008_N",
+        "CFD_WM_220_068_N",
+        "CFD_WM_221_091_N",
+        "CFD_WM_222_057_N",
+        "CFD_WM_223_056_N",
+        "CFD_WM_224_197_N",
+        "CFD_WM_225_127_N",
+        "CFD_WM_227_099_N",
+        "CFD_WM_228_065_N",
+        "CFD_WM_229_129_N",
+        "CFD_WM_230_131_N",
+        "CFD_WM_231_112_N",
+        "CFD_WM_232_070_N",
+        "CFD_WM_233_106_N",
+        "CFD_WM_234_118_N",
+        "CFD_WM_235_147_N",
+        "CFD_WM_236_072_N",
+        "CFD_WM_237_052_N",
+        "CFD_WM_238_020_N",
+        "CFD_WM_239_128_N",
+        "CFD_WM_240_125_N",
+        "CFD_WM_241_072_N",
+        "CFD_WM_242_011_N",
+        "CFD_WM_243_107_N",
+        "CFD_WM_244_003_N",
+        "CFD_WM_245_123_N",
+        "CFD_WM_247_084_N",
+        "CFD_WM_248_036_N",
+        "CFD_WM_249_239_N",
+        "CFD_WM_250_157_N",
+        "CFD_WM_251_002_N",
+        "CFD_WM_252_224_N",
+        "CFD_WM_253_119_N",
+        "CFD_WM_254_152_N",
+        "CFD_WM_255_219_N",
+        "CFD_WM_256_138_N",
+        "CFD_WM_257_161_N",
+        "CFD_WM_258_125_N"
+    ],
+
+    VERSIONS: [
+        "-2SD",
+        "-1.5SD",
+        "-1SD",
+        "-0.5SD",
+        "0SD",
+        "0.5SD",
+        "1SD",
+        "1.5SD",
+        "2SD"
+    ]
+}

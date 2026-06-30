@@ -2,6 +2,7 @@
 import { config } from "./config.js";
 import { jsPsych, setComplete } from "./init.js";
 import * as content from "./content.js";
+import * as utils from "./utils.js";
 
 // --- Variables ---
 const startTime = new Date().toLocaleString();
@@ -11,6 +12,15 @@ const urlParams = new URLSearchParams(window.location.search); // Get URL to sea
 const prolificID = urlParams.get("participant_id") || "unknown"; // If no ID in URL, ID will be "unknown"
 
 // --- Trials ---
+const imagePaths = utils.setupMedia();
+
+const preloadImages = {
+    type: jsPsychPreload,
+    image: [...imagePaths],
+    message: "Please wait while we load the study.",
+    data: { trial_name: "preload" }
+}
+
 const screenerTrial = {
     type: jsPsychSurvey,
     survey_json: content.screenerContent,
@@ -25,7 +35,7 @@ const screenerTrial = {
 
 const imageRatingTrial = {
     type: jsPsychSurvey,
-    survey_json: content.imageRatingContent("images/0SD/CFD_WM_001_014_N_0SD.png"),
+    survey_json: () => content.imageRatingContent(jsPsych.evaluateTimelineVariable("image")),
     data: { trial_name: "image_rating" }
 };
 
@@ -52,9 +62,14 @@ if (config.DEBUG_LOGS) console.log("Example") // Sample debug log that only prin
 // --- Timeline ---
 var timeline = [];
 
+const imageTimeline = {
+    timeline: [imageRatingTrial],
+    timeline_variables: imagePaths.map(path => ({ image: path }))
+};
+
 timeline.push(
     screenerTrial,
-    imageRatingTrial,
+    imageTimeline,
     demographicsTrial,
     completionTrial
 );
