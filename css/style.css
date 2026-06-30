@@ -7,17 +7,6 @@ body:has(.sd-rating) {
         margin: 0px !important;
     }
 
-    /* Center footer */
-    .sd-action-bar {
-        justify-content: center;
-    }
-
-    /* Reduce footer padding */
-    .sd-body__navigation {
-        padding-top: 25px !important;
-        padding-bottom: 0px !important;
-    }
-
     /* Reduce page padding */
     .sd-body.sd-body--responsive {
         padding: 20px;
@@ -51,7 +40,7 @@ body:has(.sd-rating) {
         gap: 10px;
     }
 
-    /* Center label text */
+    /* Center label text and allow multi line text */
     .sd-rating__item-text.sd-rating__min-text,
     .sd-rating__item-text.sd-rating__max-text {
         position: absolute;
@@ -60,17 +49,17 @@ body:has(.sd-rating) {
         max-width: 120px;
     }
 
+    /* Adjust min label position */
     .sd-rating__item-text.sd-rating__min-text {
-        left: 0;
         transform: translate(-30%, -25%);
     }
 
+    /* Adjust max label position */
     .sd-rating__item-text.sd-rating__max-text {
-        right: 0;
         transform: translate(25%, -25%);
     }
 
-    /* Allow label overflow under each button */
+    /* Allow label overflow, set label text size */
     .sd-rating--wrappable .sd-rating__item-text .sv-string-viewer {
         text-overflow: initial;
         overflow: visible;
