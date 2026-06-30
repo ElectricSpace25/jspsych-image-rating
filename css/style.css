@@ -20,7 +20,7 @@ body:has(.sd-rating) {
 
     /* Reduce page padding */
     .sd-body.sd-body--responsive {
-        padding: 10px;
+        padding: 20px;
     }
 
     /* Remove space between rows */
@@ -43,7 +43,7 @@ body:has(.sd-rating) {
 
     /* Shrink rating buttons */
     .sd-rating__item {
-        --base-unit: 5px;
+        --base-unit: 7px;
     }
 
     /* Increase rating button gaps, add padding to fit labels */
@@ -62,12 +62,12 @@ body:has(.sd-rating) {
 
     .sd-rating__item-text.sd-rating__min-text {
         left: 0;
-        transform: translate(-35%, -25%);
+        transform: translate(-30%, -25%);
     }
 
     .sd-rating__item-text.sd-rating__max-text {
         right: 0;
-        transform: translate(30%, -25%);
+        transform: translate(25%, -25%);
     }
 
     /* Allow label overflow under each button */
@@ -77,5 +77,6 @@ body:has(.sd-rating) {
         display: flex;
         font-size: 14px;
         line-height: 18px;
+        font-weight: bold;
     }
 }

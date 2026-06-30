@@ -27,6 +27,8 @@ export const screenerContent = {
 
 export function imageRatingContent(image) {
     return {
+        autoAdvanceEnabled: true,
+        showNavigationButtons: false,
         pages: [
             {
                 title: "How trustworthy is this face?",
