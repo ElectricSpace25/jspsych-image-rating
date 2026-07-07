@@ -1,4 +1,11 @@
+/* Only applies to pages with rating questions */
 body:has(.sd-rating) {
+
+    /* Center contents vertically */
+    .sd-body__page {
+        justify-content: center;
+        min-height: 95dvh;
+    }
 
     /* Center header */
     .sd-page__title {
@@ -7,9 +14,9 @@ body:has(.sd-rating) {
         margin: 0px !important;
     }
 
-    /* Reduce page padding */
+    /* Remove page padding */
     .sd-body.sd-body--responsive {
-        padding: 20px;
+        padding: 0px;
     }
 
     /* Remove space between rows */
@@ -68,4 +75,5 @@ body:has(.sd-rating) {
         line-height: 18px;
         font-weight: bold;
     }
+
 }
