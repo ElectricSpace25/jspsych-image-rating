@@ -49,7 +49,6 @@ for file_path in files:
                 "image": Path(row["image"]).stem.rsplit("_", 1)[0],
                 "condition": Path(row["image"]).parent.name,
                 "value": resp_json["rating"],
-                "video": current_video,
                 "rt": row["rt"]
             })
 
