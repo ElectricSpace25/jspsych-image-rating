@@ -25,8 +25,6 @@ for file_path in files:
 
     df = pd.read_csv(file_path)
 
-    current_video = None
-
     for _, row in df.iterrows():
         trial_name = row["trial_name"]
 
