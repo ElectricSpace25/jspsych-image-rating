@@ -35,7 +35,6 @@ export const images = {
         "CFD_WM_014_002_N",
         "CFD_WM_015_002_N",
         "CFD_WM_016_001_N",
-        "CFD_WM_017_002_N",
         "CFD_WM_018_002_N",
         "CFD_WM_019_003_N",
         "CFD_WM_020_001_N",
@@ -79,7 +78,6 @@ export const images = {
         "CFD_WM_218_074_N",
         "CFD_WM_219_008_N",
         "CFD_WM_220_068_N",
-        "CFD_WM_221_091_N",
         "CFD_WM_222_057_N",
         "CFD_WM_223_056_N",
         "CFD_WM_224_197_N",
@@ -87,7 +85,6 @@ export const images = {
         "CFD_WM_227_099_N",
         "CFD_WM_228_065_N",
         "CFD_WM_229_129_N",
-        "CFD_WM_230_131_N",
         "CFD_WM_231_112_N",
         "CFD_WM_232_070_N",
         "CFD_WM_233_106_N",
@@ -118,14 +115,10 @@ export const images = {
     ],
 
     VERSIONS: [
-        "-2SD",
-        "-1.5SD",
         "-1SD",
         "-0.5SD",
         "0SD",
         "0.5SD",
-        "1SD",
-        "1.5SD",
-        "2SD"
+        "1SD"
     ]
 }
