@@ -13,6 +13,7 @@ const prolificID = urlParams.get("participant_id") || "unknown"; // If no ID in 
 
 // --- Trials ---
 const imagePaths = utils.setupMedia();
+if (config.DEBUG_LOGS) console.log(imagePaths);
 
 const preloadImages = {
     type: jsPsychPreload,
@@ -56,8 +57,6 @@ const completionTrial = {
         setComplete(true); // Mark study as completed
     },
 };
-
-if (config.DEBUG_LOGS) console.log("Example") // Sample debug log that only prints if DEBUG_LOGS is true
 
 // --- Timeline ---
 var timeline = [];
