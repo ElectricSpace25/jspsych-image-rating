@@ -22,7 +22,30 @@ export const screenerContent = {
                 choices: ["Democratic", "Republican", "Independent", "Libertarian", "Green Party", "Other"],
                 isRequired: true
             }
-        ]
+        ],
+    completeText: "Continue",
+};
+
+// --- Instructions ---
+export const instructionsContent = {
+    title: "Instructions",
+    pages: [
+        {
+            elements: [
+                {
+                    type: "html",
+                    html: `
+                        <p>Thank you for participating in our experiment!</p>
+                        <p>We are researchers interested in how we understand other people.</p>
+                        <p>Your job today is simple. You will be presented with a face and will be asked to rate how trustworthy it is.</p>
+                        <p>This is placeholder text.</p>
+                        <img src="images/example.png" style="width: 480px; border-radius: 4px; box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15);"> 
+                    `
+                }
+            ]
+        },
+    ],
+    completeText: "Continue",
 };
 
 export function imageRatingContent(image) {
@@ -134,17 +157,18 @@ export const demographicsContent = {
                     }
                 ]
         }
-    ]
+    ],
+    completeText: "Continue",
 };
 
 export const completionContent = {
     title: "Study Completed",
-    completeText: "Click here to return to Prolific",
     elements:
         [
             {
                 type: "html",
                 html: "<p>Thank you for participating in the study!</p>",
             }
-        ]
+        ],
+    completeText: "Click here to return to Prolific",
 };
